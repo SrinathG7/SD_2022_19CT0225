@@ -79,9 +79,9 @@ def Moves(board, pawnNumX, pawnNumY, move, pFlag):
     
     #Up
     if move == 4:
-        if pawnNumY-1 >= 6 or pawnNumY-1 <= 0:
-            print("cant do that move")
-            Moves(board, pawnNumX, pawnNumY, move, pFlag)
+        # if pawnNumY-1 >= 6 or pawnNumY-1 <= 0:
+        #     print("cant do that move")
+        #     Moves(board, pawnNumX, pawnNumY, move, pFlag)
         if pFlag == 0:
             if board[pawnNumX][pawnNumY - 1] == "p2":
                 p2Lose += p2Lose
@@ -89,9 +89,9 @@ def Moves(board, pawnNumX, pawnNumY, move, pFlag):
             board[pawnNumX][pawnNumY - 1] = "p1"
             
         else:
-            if board[pawnNumX][pawnNumY - 1] == "p1":
+            if board[pawnNumX-2][pawnNumY - 1] == "p1":
                 p1Lose += 1
-            board[pawnNumX][pawnNumY - 1] = "p2"
+            board[pawnNumX-2][pawnNumY - 1] = "p2"
         
         
         board[pawnNumX-1][pawnNumY-1] = 0
@@ -111,7 +111,7 @@ def Moves(board, pawnNumX, pawnNumY, move, pFlag):
         else:
             if board[pawnNumX][pawnNumY - 1] == "p1":
                 p1Lose += 1
-            board[pawnNumX-2][pawnNumY-1] = "p2"
+            board[pawnNumX+2][pawnNumY-1] = "p2"
             board[pawnNumX-1][pawnNumY-1] = 0
 
     if move == 2:
