@@ -1,49 +1,10 @@
 
 
 def pawnInput(board, pawnNumX, pawnNumY, noPawn, pFlag):
-    # turn = False
-    # if pFlag != 0:
-    #     turn = True
-    # else:
-    #     pFlag = 0
-    #     turn = False
-    # while(pawnNumX >= 6 or pawnNumX <= 0 or pawnNumY >= 6 or pawnNumY <= 0 or noPawn != 0 or turn):
-    #     if pFlag != 0:
-    #         turn = True
-    #     else:
-    #         pFlag = 0
-    #         turn = False
-    #     print("give a valid input (1 to 5)")
-    #     print("Control the Pawn in tile(x-axis)[ 1, 2, 3, 4, 5 ]: ")
-    #     pawnNumX = int(input())
-    #     print("Control the Pawn in tile(y-axis)[ 1, 2, 3, 4, 5 ]: ")
-    #     pawnNumY = int(input())
-    #     if(board[pawnNumX-1][pawnNumY-1]) != "p1":
-    #         print("There is no pawn")
-    #         noPawn += 1
-    #         pawnInput(board, pawnNumX, pawnNumY, noPawn, pFlag)
-    #     else:
-    #         noPawn = 0
-    #     if board[pawnNumX-1][pawnNumY-1] == "p2":
-    #         print("its not ur move")
-    #         pFlag = 1
-    #         pawnInput(board, pawnNumX, pawnNumY, noPawn, pFlag)
-    #     else:
-    #         turn = False
-    #         pFlag = 0
 
-
-    # if board[pawnNumX-1][pawnNumY-1] == "p2":
-    #     print("its not ur move")
-    #     pFlag = 1
-    #     pawnInput(board, pawnNumX, pawnNumY, noPawn, pFlag)
-    # else:
-    #     turn = False
-    #     pFlag = 0
-    # while(pawnNumX >= 6 or pawnNumY >= 6 or pawnNumX <= 0 or pawnNumY <= 0):
-    print("Control the Pawn in tile(x-axis)[ 1, 2, 3, 4, 5 ]: ")
-    pawnNumX = int(input())
     print("Control the Pawn in tile(y-axis)[ 1, 2, 3, 4, 5 ]: ")
+    pawnNumX = int(input())
+    print("Control the Pawn in tile(x-axis)[ 1, 2, 3, 4, 5 ]: ")
     pawnNumY = int(input())
     if pawnNumX >= 6 or pawnNumY >= 6 or pawnNumX <= 0 or pawnNumY <= 0:
         pawnInput(board, pawnNumX, pawnNumY, noPawn, pFlag)
@@ -96,9 +57,9 @@ def Moves(board, pawnNumX, pawnNumY, move, pFlag):
         
         board[pawnNumX-1][pawnNumY-1] = 0
     if move == 3:
-        if pawnNumX >= 6 or pawnNumY >= 6 or pawnNumX <= 0 or pawnNumY <= 0:
-            print("cant do that move")
-            Moves(board, pawnNumX, pawnNumY, move, pFlag)
+        # if pawnNumX >= 6 or pawnNumY >= 6 or pawnNumX <= 0 or pawnNumY <= 0:
+        #     print("cant do that move")
+        #     Moves(board, pawnNumX, pawnNumY, move, pFlag)
         
         if pFlag == 0:
             if board[pawnNumX][pawnNumY - 1] == "p2":
@@ -116,9 +77,9 @@ def Moves(board, pawnNumX, pawnNumY, move, pFlag):
 
     if move == 2:
         
-        if pawnNumX >= 6 or pawnNumY >= 6 or pawnNumX <= 0 or pawnNumY <= 0:
-            print("cant do that move")
-            Moves(board, pawnNumX, pawnNumY, move, pFlag)
+        # if pawnNumX >= 6 or pawnNumY >= 6 or pawnNumX <= 0 or pawnNumY <= 0:
+        #     print("cant do that move")
+        #     Moves(board, pawnNumX, pawnNumY, move, pFlag)
         
         if pFlag == 0:
             if pawnNumX >= 6 or pawnNumY >= 6 or pawnNumX <= 0 or pawnNumY <= 0:
